@@ -47,15 +47,25 @@
 			}
 
 			/* Universal styles for links and stuff */
+
+			a.button{
+				transition: all 1s ease-in-out;
+			}
+
 			a.button:hover {
 				background-color: #f8cf40 !important;
 				color: #3e9d97 !important;
-				box-shadow: #3e9d97 5px 5px !important;
+				box-shadow: #3e9d97 5px 5px, #3e9d97 -5px -5px !important;
 				border: none;
+				transform: scale(2); /*Scales up the button on the hover by 2x scale compared to what it is currently*/
 			}
 
 			.unsubscribe:hover{
 				color: #f8cf40 !important;
+			}
+
+			.unsubscribe:visited{
+				color: #3e9d97 !important;
 			}
 
 			/* Responsive styles */
