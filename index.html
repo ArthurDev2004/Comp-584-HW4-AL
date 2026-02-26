@@ -51,10 +51,11 @@
 				background-color: #f8cf40 !important;
 				color: #3e9d97 !important;
 				box-shadow: #3e9d97 5px 5px !important;
+				border: none;
 			}
 
 			.unsubscribe:hover{
-				color: #f8cf40;
+				color: #f8cf40 !important;
 			}
 
 			/* Responsive styles */
@@ -62,6 +63,10 @@
 			/*Will be media query for making responsive change for whenever the device has a max viewport width of 600px, which is around the breakpoint for phones*/
 			@media screen and (max-width: 600px)
 			{
+				body{
+					background-color: #f8cf40;
+				}
+
 				.mobile{
 					width: 100% !important;
 				}
