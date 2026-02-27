@@ -92,10 +92,30 @@
 
 			/* Responsive styles */
 			
-			#slide1:checked ~ * .slides1 {display: table-row;}
+			#slide1:checked ~ * .slides1 {
+				display: table-row;
+				animation: switchinganimation 2s;
+			}
 			#slide1:checked ~ * .slides2 {display: none;}
-			#slide2:checked ~ * .slides2 {display: table-row;}
+			#slide2:checked ~ * .slides2 {display: table-row;animation: switchinganimation 2s;}
 			#slide2:checked ~ * .slides1 {display: none;} /*The * is for getting all of the elements, and this is the sibling css selector*/
+
+			/*Will be used as an animation for when the labels are used to switch content, kind of fade in*/
+			@keyframes switchinganimation{
+				0%{
+					opacity: 0;
+				}
+
+				50%{
+					opacity: .50;
+				}
+
+
+				100%{
+					opacity: 1;
+				}
+
+			}
 
 			/*Will be media query for making responsive change for whenever the device has a max viewport width of 600px, which is around the breakpoint for phones*/
 			@media screen and (max-width: 600px)
@@ -170,7 +190,7 @@
 													<td>
 														<img style="max-width: 100%; height: auto; margin: 0 auto;" src="images/Boss-1.jpg" alt="Thumbs Up Approval from Professionals">
 														<h2 style="text-align: center; margin: 0 auto;">Matthew Jameson</h2>
-														<p style="text-align: center; margin: 0 auto;">As an employer, it’s easy to tell when a candidate has been properly prepared. Applicants who come through EmploymentGurus.com consistently stand out—they communicate clearly, understand their strengths, and know how to connect their skills to real business needs. Interviews are more focused, more professional, and far more productive.</p>
+														<p style="text-align: center; margin: 0 auto;">As an employer, it's easy to tell when a candidate has been properly prepared. Applicants who come through EmploymentGurus.com consistently stand out—they communicate clearly, understand their strengths, and know how to connect their skills to real business needs. Interviews are more focused, more professional, and far more productive.</p>
 													</td>
 												</tr>
 											</table>
@@ -181,7 +201,7 @@
 													<td>
 														<img style="max-width: 100%; height: auto; margin: 0 auto;" src="images/Boss-2.jpg" alt="One hundred percent satisfaction">
 														<h2 style="text-align: center; margin: 0 auto;">James Ivy</h2>
-														<p style="text-align: center; margin: 0 auto;">We don’t just look for qualifications—we look for candidates who are job-ready. Graduates of this program arrive with polished resumes, realistic expectations, and the confidence to contribute from day one. It saves us time in the hiring process and raises the overall quality of our applicant pool, which is exactly what employers want.</p>
+														<p style="text-align: center; margin: 0 auto;">We don't just look for qualifications—we look for candidates who are job-ready. Graduates of this program arrive with polished resumes, realistic expectations, and the confidence to contribute from day one. It saves us time in the hiring process and raises the overall quality of our applicant pool, which is exactly what employers want.</p>
 													</td>
 												</tr>
 											</table>
