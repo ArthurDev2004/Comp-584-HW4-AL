@@ -85,10 +85,17 @@
 				cursor: pointer;
 			}
 
+			.label:hover{
+				background-color: #f8cf40;
+				color: #3e9d97;
+			}
+
 			/* Responsive styles */
 			
 			#slide1:checked ~ * .slides1 {display: table-row;}
+			#slide1:checked ~ * .slides2 {display: none;}
 			#slide2:checked ~ * .slides2 {display: table-row;}
+			#slide2:checked ~ * .slides1 {display: none;} /*The * is for getting all of the elements, and this is the sibling css selector*/
 
 			/*Will be media query for making responsive change for whenever the device has a max viewport width of 600px, which is around the breakpoint for phones*/
 			@media screen and (max-width: 600px)
@@ -144,21 +151,26 @@
 						<tr>
 							<td>
 								<div style="text-align: center;">
-									<h1>What do job seekers think?</h1>
+									<h1>Our Testimonials</h1>
 								</div>
 							</td>
 						</tr>
 						<tr>
 							<td> <!--Will be the two column layout-->
 								<table style="border: 0; padding: 0; border-spacing: 0; max-width: 100%; margin-left: auto; margin-right: auto;" role="presentation">
+									<tr>
+										<input type="radio" name="slides" id="slide1" checked>
+										<input type="radio" name="slides" id="slide2">
+									</tr>
+
 									<tr class="slides2">
 										<td style="vertical-align: top; margin: auto; border: 0; width: 50%;" class="block"> <!--Each column will be its own table-->
 											<table style="border: 0; padding: 0; border-spacing: 0; width: 100%;" role="presentation">
 												<tr>
 													<td>
-														<img style="max-width: 100%; height: auto; margin: 0 auto;" src="images/Professional-Man.jpg" alt="Thumbs Up Approval from Professionals">
+														<img style="max-width: 100%; height: auto; margin: 0 auto;" src="images/Boss-1.jpg" alt="Thumbs Up Approval from Professionals">
 														<h2 style="text-align: center; margin: 0 auto;">Matthew Jameson</h2>
-														<p style="text-align: center; margin: 0 auto;">I was close to graduating and honestly nervous about entering such a competitive job market. The EmploymentGurus course completely changed how I approached job hunting. Instead of blindly applying, I learned how to position myself, tailor my applications, and stand out to recruiters. I secured a full-time job shortly after graduation, and I genuinely credit the course for giving me an edge over other candidates. It was one of the best investments I made in myself.</p>
+														<p style="text-align: center; margin: 0 auto;">As an employer, it’s easy to tell when a candidate has been properly prepared. Applicants who come through EmploymentGurus.com consistently stand out—they communicate clearly, understand their strengths, and know how to connect their skills to real business needs. Interviews are more focused, more professional, and far more productive.</p>
 													</td>
 												</tr>
 											</table>
@@ -167,9 +179,9 @@
 											<table style="border: 0; padding: 0; border-spacing: 0; width: 100%;" role="presentation">
 												<tr>
 													<td>
-														<img style="max-width: 100%; height: auto; margin: 0 auto;" src="images/Professional-Woman.jpg" alt="One hundred percent satisfaction">
-														<h2 style="text-align: center; margin: 0 auto;">Olivia Ivy</h2>
-														<p style="text-align: center; margin: 0 auto;">Before taking the course from EmploymentGurus.com, I felt completely overwhelmed by the job search process. I had the degree, but no clear strategy. The course broke everything down step by step—from building a strong resume to confidently answering interview questions. Within a few weeks of applying what I learned, I landed a role directly related to my field. This course gave me clarity, confidence, and results when I needed them most.</p>
+														<img style="max-width: 100%; height: auto; margin: 0 auto;" src="images/Boss-2.jpg" alt="One hundred percent satisfaction">
+														<h2 style="text-align: center; margin: 0 auto;">James Ivy</h2>
+														<p style="text-align: center; margin: 0 auto;">We don’t just look for qualifications—we look for candidates who are job-ready. Graduates of this program arrive with polished resumes, realistic expectations, and the confidence to contribute from day one. It saves us time in the hiring process and raises the overall quality of our applicant pool, which is exactly what employers want.</p>
 													</td>
 												</tr>
 											</table>
@@ -201,36 +213,13 @@
 										</td>
 									</tr>
 									<!--Buttons for the -->
-				
 
-								</table>
-							</td>
-						</tr>
-						<tr> <!--Will be used for the slideshow interactivity affect-->
-						<td> 
-								<table style="border: 0; padding: 0; border-spacing: 0; max-width: 100%; margin-left: auto; margin-right: auto;" role="presentation">
 									<tr>
-										<td style="vertical-align: top; margin: auto; border: 0; width: 50%; text-align: center;">
-											<table style="border: 0; padding: 0; border-spacing: 0; width: 100%;" role="presentation">
-												<tr>
-													<td style="text-align: center;">
-														<input type="radio" name="slides" id="slide1" checked>
-														<label for="slide1"  class="label" style="margin: auto; border: solid black 2px; padding: 4px">Employees</label>
-													</td>
-												</tr>
-
-											</table>
+										<td style="text-align: center; width: 50%">
+											<label for="slide1"  class="label" style="margin: auto; border: solid black 2px; padding: 14px; display: inline-block; margin: 15px;">Employees</label>
 										</td>
-										<td style="vertical-align: top; margin: auto; border: 0; width: 50%; text-align: center;">
-											<table style="border: 0; padding: 0; border-spacing: 0; width: 100%;" role="presentation">
-												<tr>
-													<td style="text-align: center;">
-														<input type="radio" name="slides" id="slide2">
-														<label for="slide2" class="label" style=" border: solid black 2px; padding: 4px">Employer</label>
-													</td>
-												</tr>
-
-											</table>
+										<td style="text-align: center; width: 50%">
+											<label for="slide2" class="label" style=" border: solid black 2px; padding: 14px; display: inline-block; margin: 15px;">Employers</label>
 										</td>
 									</tr>
 				
@@ -238,6 +227,7 @@
 								</table>
 							</td>
 						</tr>
+				
 						<tr>
 							<td>
 								<!-- Body copy -->
